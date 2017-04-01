@@ -51,9 +51,14 @@ class Response extends Model
 
             $choice = Choice::FindOrFail($choiceId);
 
-            $responseItem = new ResponseItem;
-            $responseItem->response_id = $this->id;
-            $responseItem->question_id = $question->id;
+            $rseponseItem = ResponseItem::where('response_id', $this->id)->where('question_id', $question->id)->first();
+
+            if (!$responseItem) {
+                $responseItem = new ResponseItem;
+                $responseItem->response_id = $this->id;
+                $responseItem->question_id = $question->id;
+            }
+
             $responseItem->choice_id = $choice->id;
             $responseItem->save();
         }
