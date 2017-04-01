@@ -25,7 +25,7 @@ class Response extends Model
         $response = new self;
         $response->save();
 
-        return $response->updateFromRequest($request, $response->id);
+        return $response->updateFromRequest($request);
     }
 
     public function updateFromRequest(Request $request)
@@ -51,7 +51,7 @@ class Response extends Model
 
             $choice = Choice::FindOrFail($choiceId);
 
-            $responseItem = new Response;
+            $responseItem = new ResponseItem;
             $responseItem->response_id = $this->id;
             $responseItem->question_id = $question->id;
             $responseItem->choice_id = $choice->id;
