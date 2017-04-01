@@ -26,7 +26,7 @@ class QuestionManager
         }
 
         // Load in question choices
-        $question->load('choice');
+        $question->load('choices');
 
         // Delete choices with text not in choicesText array
         $choicesToDelete = $question->choices()->whereNotIn('text', $choicesTexts)->get();
