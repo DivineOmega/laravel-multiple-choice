@@ -8,7 +8,7 @@
 
         @foreach($question->choices as $choice)
             <div class="lmc-choice" id="lmc-choice-{{ $choice->id }}">
-                <input type="radio" class="lmc-choice-input" id="lmc-choice-input-{{ $choice->id }}"> 
+                <input type="radio" class="lmc-choice-input" id="lmc-choice-input-{{ $choice->id }}" name="lmc-choice-input-{{ $choice->id }}"> 
                 <label class="lmc-choice-label" id="lmc-choice-label-{{ $choice->id }}" for="lmc-choice-input-{{ $choice->id }}">
                     <span class="lmc-choice-text" id="lmc-choice-text-{{ $choice->id }}">{{ $choice->text }}</span>
                 </label>
