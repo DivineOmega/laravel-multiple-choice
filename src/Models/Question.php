@@ -20,4 +20,10 @@ class Question extends Model
     {
         return $this->hasMany('DivineOmega\LaravelMultipleChoice\Models\ResponseItem');
     }
+
+    public function render()
+    {
+        $view = View::make('lmc.question', ['question' => $this]);
+        return $view->render();
+    }
 }
