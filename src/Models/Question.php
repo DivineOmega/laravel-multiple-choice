@@ -24,7 +24,7 @@ class Question extends Model
 
     public function render()
     {
-        $view = View::make('question', ['question' => $this]);
+        $view = View::make('lmc::question', ['question' => $this]);
         return $view->render();
     }
 }

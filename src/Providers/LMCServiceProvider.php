@@ -18,10 +18,10 @@ class LMCServiceProvider extends ServiceProvider
             __DIR__.'/../Database/Migrations/' => database_path('migrations')
         ], 'migrations');
 
-        $this->loadViewsFrom(__DIR__.'/../Resources/Views', 'laravel-multiple-choice');
+        $this->loadViewsFrom(__DIR__.'/../Resources/Views', 'lmc');
 
         $this->publishes([
-            __DIR__.'/../Resources/Views' => base_path('resources/views/vendor/laravel-multiple-choice'),
+            __DIR__.'/../Resources/Views' => base_path('resources/views/vendor/lmc'),
         ], 'views');
     }
 
