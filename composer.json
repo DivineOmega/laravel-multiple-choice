@@ -3,7 +3,8 @@
     "description": "Package that provides multiple choice questions and answers Edit",
     "type": "library",
     "require": {
-        "illuminate/database": "^5.1"
+        "illuminate/database": "^5.1",
+        "illuminate/view": "^5.1"
     },
     "license": "LGPL3",
     "authors": [

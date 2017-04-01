@@ -4,6 +4,7 @@ namespace DivineOmega\LaravelMultipleChoice\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\View;
 
 class Question extends Model
 {
