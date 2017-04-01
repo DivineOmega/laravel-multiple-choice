@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLmcResponseTable extends Migration
+class CreateLmcResponseItemsTable extends Migration
 {
     /**
      * Run the migrations.
