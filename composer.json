@@ -1,0 +1,20 @@
+{
+    "name": "divineomega/laravel-mutliple-choice",
+    "description": "Package that provides multiple choice questions and answers Edit",
+    "type": "library",
+    "require": {
+        "illuminate/database": "^5.1"
+    },
+    "license": "LGPL3",
+    "authors": [
+        {
+            "name": "Jordan Hall",
+            "email": "jordan@hall05.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DivineOmega\\LaravelMultipleChoice\\": "src/"
+        }
+    }
+}
