@@ -25,13 +25,11 @@ class Response extends Model
         $response = new self;
         $response->save();
 
-        return $this->updateFromRequest($request, $response->id);
+        return $response->updateFromRequest($request, $response->id);
     }
 
-    public static function updateFromRequest(Request $request, $responseId)
+    public function updateFromRequest(Request $request)
     {
-        $response = self::FindOrFail($responseId);
-
         $inputs = $request->all();
 
         foreach($inputs as $name => $choiceId) {
@@ -54,12 +52,12 @@ class Response extends Model
             $choice = Choice::FindOrFail($choiceId);
 
             $responseItem = new Response;
-            $responseItem->response_id = $response->id;
+            $responseItem->response_id = $this->id;
             $responseItem->question_id = $question->id;
             $responseItem->choice_id = $choice->id;
             $responseItem->save();
         }
 
-        return $response;
+        return $this;
     }
 }
