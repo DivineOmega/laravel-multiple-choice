@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLmcChoicesTable extends Migration
+class AddDescriptionToLmcChoicesTable extends Migration
 {
     /**
      * Run the migrations.
