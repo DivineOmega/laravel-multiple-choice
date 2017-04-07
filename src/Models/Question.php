@@ -17,14 +17,20 @@ class Question extends Model
         return $this->hasMany('DivineOmega\LaravelMultipleChoice\Models\Choice');
     }
 
-    public function responseItem()
+    public function responseItems()
     {
         return $this->hasMany('DivineOmega\LaravelMultipleChoice\Models\ResponseItem');
     }
 
-    public function render()
+    public function render(Response $response = null)
     {
-        $view = View::make('lmc::question', ['question' => $this]);
+        $selectedChoice = null;
+
+        if ($response) {
+            $selectedChoice = $this->responseItems()->where('response_id', $response->id)->first();
+        }
+
+        $view = View::make('lmc::question', ['question' => $this, 'selectedChoice' => $selectedChoice]);
         return $view->render();
     }
 }
