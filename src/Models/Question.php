@@ -27,7 +27,8 @@ class Question extends Model
         $selectedChoice = null;
 
         if ($response) {
-            $selectedChoice = $this->responseItems()->where('response_id', $response->id)->first();
+            $responseItem = $this->responseItems()->where('response_id', $response->id)->first();
+            $selectedChoice = $responseItem->choice;
         }
 
         $view = View::make('lmc::question', ['question' => $this, 'selectedChoice' => $selectedChoice]);
