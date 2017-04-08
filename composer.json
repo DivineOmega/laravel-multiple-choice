@@ -1,5 +1,5 @@
 {
-    "name": "divineomega/laravel-mutliple-choice",
+    "name": "divineomega/laravel-multiple-choice",
     "description": "Package that provides multiple choice questions and answers Edit",
     "type": "library",
     "require": {
