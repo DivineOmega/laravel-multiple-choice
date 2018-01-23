@@ -7,7 +7,7 @@
         "illuminate/view": "^5.1",
         "illuminate/http": "^5.1"
     },
-    "license": "LGPL3",
+    "license": "LGPL-3.0-only",
     "authors": [
         {
             "name": "Jordan Hall",
