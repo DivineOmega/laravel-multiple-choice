@@ -1,6 +1,6 @@
 {
     "name": "divineomega/laravel-multiple-choice",
-    "description": "Package that provides multiple choice questions and answers Edit",
+    "description": "Package that provides multiple choice questions and answers",
     "type": "library",
     "require": {
         "illuminate/database": "^5.1",
