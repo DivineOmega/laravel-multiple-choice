@@ -1,7 +1,7 @@
-# laravel-multiple-choice
+# Laravel Multiple Choice
 Package that provides multiple choice questions and answers
 
-## Installation.
+## Installation
 
 1. Run `composer require divineomega/laravel-multiple-choice`.
 2. Add `DivineOmega\LaravelMultipleChoice\Providers\LMCServiceProvider::class` to `providers` array in `config/app.php`.
